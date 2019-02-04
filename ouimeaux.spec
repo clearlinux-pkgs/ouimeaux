@@ -4,7 +4,7 @@
 #
 Name     : ouimeaux
 Version  : 0.8
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/a3/3a/7b3677d29896282314e492d123a1e72fa29f263be4892188aa7d54aa769f/ouimeaux-0.8.tar.gz
 Source0  : https://files.pythonhosted.org/packages/a3/3a/7b3677d29896282314e492d123a1e72fa29f263be4892188aa7d54aa769f/ouimeaux-0.8.tar.gz
 Summary  : Open source control for Belkin WeMo devices
@@ -16,13 +16,20 @@ Requires: ouimeaux-python = %{version}-%{release}
 Requires: ouimeaux-python3 = %{version}-%{release}
 Requires: PyYAML
 Requires: gevent
+Requires: python-future
 Requires: requests
 Requires: six
 BuildRequires : buildreq-distutils3
 
 %description
+==============================
 ouimeaux
-        ==============================
+==============================
+.. image:: https://badge.fury.io/py/ouimeaux.png
+:target: http://badge.fury.io/py/ouimeaux
+
+.. image:: https://travis-ci.org/iancmcc/ouimeaux.png?branch=develop
+:target: https://travis-ci.org/iancmcc/ouimeaux
 
 %package bin
 Summary: bin components for the ouimeaux package.
@@ -67,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1546121892
+export SOURCE_DATE_EPOCH=1549313579
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
